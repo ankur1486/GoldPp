@@ -1,5 +1,6 @@
 package com.gold;
 
+import android.app.ActionBar;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentTransaction;
@@ -18,6 +19,10 @@ public class ForgotPwdActivity extends ActionBarActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_gold_forgot_pwd);
+        
+        ActionBar actionBar = getActionBar();
+        actionBar.setDisplayHomeAsUpEnabled(true);
+		actionBar.setDisplayShowTitleEnabled(true);
         
 //        Fragment forgotpwdFragment = new ForgotPwdFragment();
 //        FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
